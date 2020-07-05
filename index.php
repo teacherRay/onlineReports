@@ -6,7 +6,7 @@
             
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12 jumbotron">
+                    <div class="col-md-12 jumotron">
                             <h2 style="text-align: center;">
                                 The Home of Engine Online Report Card System
                                 <span style="float: right;"><a href="login.php" class="btn btn-info btn-lg">Admin Login</a></span>
