@@ -15,7 +15,8 @@
 		$Name = $data_row['name'];
 		$Classroom= $data_row['classroom'];
 		$Classtime = $data_row['classtime'];
-		$Pcontact = $data_row['pcontact'];
+		$Behaviour = $data_row['behaviour'];
+		$Comprehension = $data_row['comprehension'];
 	}
 
  ?>
@@ -35,7 +36,7 @@
 				  </div>
 				  <div class="form-group">
 				    
-				    Full Name:<input type="text" class="form-control" name="fullname" value="<?php echo 
+				    Full Name:<input type="text" class="form-control" name="name" value="<?php echo 
 				    $Name;?>" placeholder="full name" required>
 				  </div>
 
@@ -48,7 +49,11 @@
 				  </div>
 
 				  <div class="form-group"> 
-				    Parent Phone No.:<input type="text" class="form-control" name="pphone" value="<?php echo $Pcontact;?>" required>
+				   Behaviour<input type="text" class="form-control" name="behaviour" value="<?php echo $Behaviour;?>" required>
+				  </div>
+
+				  <div class="form-group"> 
+				  Comprehension<input type="text" class="form-control" name="comprehension" value="<?php echo $Comprehension;?>" required>
 				  </div>
 
 				  
@@ -66,17 +71,19 @@
 <?php 
 //This php code block is for editing the data that we got after clicking on update button
 	if (isset($_POST['submit'])) {
-		if (!empty($_POST['studentid']) && !empty($_POST['fullname'])) {
+		if (!empty($_POST['studentid']) && !empty($_POST['behaviour'])) {
 		
 			include ('../dbcon.php');
 			$id = $_GET['update_id'];
 			$studentid=$_POST['studentid'];
-			$name=$_POST['fullname'];
+			$name=$_POST['name'];
 			$classroom=$_POST['classroom'];
 			$classtime=$_POST['classtime'];
-			$pphone=$_POST['pphone'];
+			$behaviour=$_POST['behaviour'];
+			$comprehension=$_POST['comprehension'];
 
-			$sql = "UPDATE student SET studentid = '$studentid', name = '$name', classtime='$classtime', pcontact = '$pphone', classroom = '$classroom' WHERE id = '$id'";
+
+			$sql = "UPDATE student SET studentid = '$studentid', name = '$name', classtime='$classtime', behaviour = '$behaviour', comprehension = '$comprehension', classroom = '$classroom' WHERE id = '$id'";
 
 			$Execute = mysqli_query($conn,$sql);
 

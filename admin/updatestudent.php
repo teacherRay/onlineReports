@@ -32,10 +32,9 @@
 		<th>Student ID.</th>
 		<th>Full Name</th>
 		<th>Classroom</th>
-		<th> Classtime</th>
-		<th>parent phone No.</th>
-		<th>Profile Pic</th>
-		<th>Update</th>
+		<th>Classtime</th>
+		<th>Behaviour</th>
+		<th>Comprehension</th>
 	</tr>
 <?php 
 	include('../dbcon.php');
@@ -49,17 +48,18 @@
 		if (mysqli_num_rows($result)>0) {
 			while ($DataRows = mysqli_fetch_assoc($result)) {
 				$Id = $DataRows['id'];
-				$StudentID = $DataRows['studentid'];
+				$Studentid = $DataRows['studentid'];
 				$Name = $DataRows['name'];
 				$Classroom= $DataRows['classroom'];
                 $Classtime= $DataRows['classtime'];
                 $Behaviour= $DataRows['behaviour'];
                 $Comprehension= $DataRows['comprehension'];
-                $Participation= $DataRows['participation'];
-                $Conversation= $DataRows['conversation'];
-                $Homework= $DataRows['homework'];
-				$ProfilePic = $DataRows['image'];
+                // $Participation= $DataRows['participation'];
+                // $Conversation= $DataRows['conversation'];
+                // $Homework= $DataRows['homework'];
+				// $ProfilePic = $DataRows['image'];
 				?>
+
 				<tr class="text-center">
                     <td><?php echo $Studentid;?></td>
                     <td><?php echo $Name; ?></td>
@@ -67,9 +67,9 @@
                     <td><?php echo $Classtime;?></td>
                     <td><?php echo $Behaviour;?></td>
                     <td><?php echo $Comprehension;?></td>
-                    <td><?php echo $Participation;?></td>
+                    <!-- <td><?php echo $Participation;?></td>
                     <td><?php echo $Conversation;?></td>
-                    <td><?php echo $Homework;?></td>
+                    <td><?php echo $Homework;?></td> -->
                 </tr>
 
 					
