@@ -4,12 +4,11 @@
  include('header.php')
   ?>
             
-
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 jumbotron">
                             <h2 style="text-align: center;">
-                                Welcome to the Home of Engine Online Report Card System
+                                The Home of Engine Online Report Card System
                                 <span style="float: right;"><a href="login.php" class="btn btn-info btn-lg">Admin Login</a></span>
                             </h2>
                     </div>
