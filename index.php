@@ -50,10 +50,6 @@
         <th class="text-center">Participation</th>
         <th class="text-center">Conversation</th>
         <th class="text-center">Homework</th>
-
-       
-        <!-- <th class="text-center">parent phone No.</th> -->
-        <!-- <th class="text-center">Profile Pic</th> -->
     </tr>
 <?php 
     include('dbcon.php');
@@ -61,9 +57,7 @@
 
         $Classroom = $_POST['classroom'];
         $Classtime = $_POST['classtime'];
-        // $Studentid = $_POST['studentid'];
-
-        // $sql = "SELECT * FROM `student` WHERE `classroom` = '$Classroom' OR `studentid`='$Studentid'";
+        
         $sql = "SELECT * FROM `student` WHERE `classroom` = '$Classroom' AND `classtime`='$Classtime'";
 
         $result = mysqli_query($conn,$sql);
@@ -93,7 +87,18 @@
                     <td><?php echo $Comprehension;?></td>
                     <td><?php echo $Participation;?></td>
                     <td><?php echo $Conversation;?></td>
-                    <td><?php echo $Homework;?></td>
+
+                    <td><?php echo $Homework;?>
+                    <input type="radio" id="1" name="hwkscore" value="1">
+                    <label for="1">A</label>
+                    <input type="radio" id="2" name="hwkscore" value="2">
+                    <label for="2">B</label>
+                    <input type="radio" id="3" name="hwkscore" value="3">
+                    <label for="3">C</label>
+                    <input type="radio" id="4" name="hwkscore" value="3">
+                    <label for="4">NI</label>
+                    </td>
+                    <td><button type="button">Update Record</button></td>
                 </tr>
                 <?php
                 
