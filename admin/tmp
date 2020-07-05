@@ -1,0 +1,12 @@
+//from line 66 in updatestudent
+
+<td>
+						
+                        
+                        <img src="../databaseimg/<?php echo $ProfilePic;?>" alt="img"><br><br>
+						<form action="UpdateImg.php" method="post" enctype="multipart/form-data">
+							<input type="file" name="updateimg" style="float: left;" class="btn btn-info btn-sm">
+							<input type="hidden" name="id" value="<?php echo $Id; ?>">
+							<input type="submit" name="submitimg" value="UPDATE" class="btn btn-warning btn-sm" style="float: right;"><br>
+						</form>
+					</td>
