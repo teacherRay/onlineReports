@@ -82,22 +82,47 @@
                     <td><?php echo $Studentid;?></td>
                     <td><?php echo $Name; ?></td>
                     <td><?php echo $Classroom;?></td>
-                    <td><?php echo $Classtime;?></td>
-                    <td><?php echo $Behaviour;?></td>
-                    <td><?php echo $Comprehension;?></td>
-                    <td><?php echo $Participation;?></td>
-                    <td><?php echo $Conversation;?></td>
+                    <td><?php echo $Classtime;?>
+                  
+                    <td><?php echo $Behaviour;?>
+                    <select  name="behvscore" id="behvscore">
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">NI</option>
+                    </select></td>
+
+                    <td><?php echo $Comprehension;?>
+                    <select  name="compscore" id="compscore">
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">NI</option>
+                    </select></td>
+
+                    <td><?php echo $Participation;?>
+                    <select  name="partscore" id="partscore">
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">NI</option>
+                    </select></td>
+
+                    <td><?php echo $Conversation;?>
+                    <select  name="convscore" id="convscore">
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">NI</option>
+                    </select></td>
 
                     <td><?php echo $Homework;?>
-                    <input type="radio" id="1" name="hwkscore" value="1">
-                    <label for="1">A</label>
-                    <input type="radio" id="2" name="hwkscore" value="2">
-                    <label for="2">B</label>
-                    <input type="radio" id="3" name="hwkscore" value="3">
-                    <label for="3">C</label>
-                    <input type="radio" id="4" name="hwkscore" value="3">
-                    <label for="4">NI</label>
-                    </td>
+                    <select  name="hwkscore" id="hwkscore">
+                        <option value="4">A</option>
+                        <option value="3">B</option>
+                        <option value="2">C</option>
+                        <option value="1">NI</option>
+                    </select></td>
                     <td><button type="button">Update Record</button></td>
                 </tr>
                 <?php
