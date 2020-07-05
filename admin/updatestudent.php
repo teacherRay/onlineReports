@@ -51,18 +51,26 @@
 				$Id = $DataRows['id'];
 				$StudentID = $DataRows['studentid'];
 				$Name = $DataRows['name'];
-				$Classtime = $DataRows['classtime'];
-				$Pcontact = $DataRows['pcontact'];
-				$Classroom = $DataRows['classroom'];
+				$Classroom= $DataRows['classroom'];
+                $Classtime= $DataRows['classtime'];
+                $Behaviour= $DataRows['behaviour'];
+                $Comprehension= $DataRows['comprehension'];
+                $Participation= $DataRows['participation'];
+                $Conversation= $DataRows['conversation'];
+                $Homework= $DataRows['homework'];
 				$ProfilePic = $DataRows['image'];
 				?>
 				<tr class="text-center">
-					<td><?php echo $StudentID;?></td>
-					<td><?php echo $Name; ?></td>
-					<td><?php echo $Classroom;?></td>
-					<td><?php echo $Classtime; ?></td>
-					<td><?php echo $Pcontact; ?></td>
-					
+                    <td><?php echo $Studentid;?></td>
+                    <td><?php echo $Name; ?></td>
+                    <td><?php echo $Classroom;?></td>
+                    <td><?php echo $Classtime;?></td>
+                    <td><?php echo $Behaviour;?></td>
+                    <td><?php echo $Comprehension;?></td>
+                    <td><?php echo $Participation;?></td>
+                    <td><?php echo $Conversation;?></td>
+                    <td><?php echo $Homework;?></td>
+                </tr>
 
 					
 					<td><a href="UpdateRecord.php?Update=<?php echo $Id; ?>" class="btn btn-warning">UPDATE</a></td>

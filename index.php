@@ -94,8 +94,6 @@
                     <td><?php echo $Participation;?></td>
                     <td><?php echo $Conversation;?></td>
                     <td><?php echo $Homework;?></td>
-
-
                 </tr>
                 <?php
                 

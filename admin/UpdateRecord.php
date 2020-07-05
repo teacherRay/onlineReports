@@ -16,8 +16,6 @@
 		$Classroom= $data_row['classroom'];
 		$Classtime = $data_row['classtime'];
 		$Pcontact = $data_row['pcontact'];
-		
-
 	}
 
  ?>
